@@ -40,7 +40,7 @@ public class Triangle {
 
         // search from down to top
         for(int i = height - 2; i >= 0; i--){
-            for(int j = 0; j < i; j++){
+            for(int j = 0; j <= i; j++){
                 result[i][j] = triangle.get(i).get(j) + Math.min(result[i + 1][j], result[i + 1][j + 1]);
             }
         }
