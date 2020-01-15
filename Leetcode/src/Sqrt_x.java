@@ -21,25 +21,7 @@
  * Easy level
  *
  */
-public class Sqrt_x {
-
-    // solution 1
-    public int mySqrt(int x){
-        int curr = 0;      // current number of square
-        int result = 0; // counting , and return value
-        int add = 1;    // 差值 1，3，5，7，9，。。。。。
-
-        while(curr <= x){
-            // define whether or not overflow, 如果 curr + add结果大于 Integer.Max_value, return result就是结果了已经
-            if(Integer.MAX_VALUE - curr < add) return result;
-            curr += add;
-            result++;
-            add += 2;   // add and get the next value (差值)
-        }
-        return result - 1;  // return value = 前一个数
-    }
-
-    //solution 2
+public class Sqrt_x 
     public int mySqrt(int x){
         long low = 0;
         long high = x;
