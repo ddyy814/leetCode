@@ -44,7 +44,7 @@ public class Count_and_Say {
         StringBuilder stringBuilder = new StringBuilder();
         for(int i = 0; i < value.length(); i++){
             int count = 1;
-            while(i < value.length() && value.charAt(i) == value.charAt(i + 1)){
+            while(i < value.length() - 1 && value.charAt(i) == value.charAt(i + 1)){
                 count++;
                 i++;
             }
