@@ -23,12 +23,10 @@
 public class Longest_Common_Prefix {
     public static String longestCommonPrefix(String[] strs){
         if(strs == null || strs.length == 0) return "";
-        String result = strs[0];    // use the first string as result
-        for(int i = 1; i < strs.length; i++){
-            // indexOf 用于查找string中的result是否在上面的result当中
-            while(strs[i].indexOf(result) != 0) {
-                result.substring(0, result.length() - 1);
-            }
+        String result = strs[0];
+        for(String s : strs){
+            while(s.indexOf(result) != 0)
+                result = result.substring(0, result.length() - 1);
         }
         return result;
     }
