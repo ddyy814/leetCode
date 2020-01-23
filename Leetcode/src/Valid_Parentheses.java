@@ -33,7 +33,7 @@
  */
 public class Valid_Parentheses {
     public boolean isValid(String s){
-        Stack<Character> stack = new Stack<Character>;
+        Stack<Character> stack = new Stack<Character>();
         for(char c : s.toCharArray()){
             if(c == '(')
                 stack.push(')');
