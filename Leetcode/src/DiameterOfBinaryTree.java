@@ -27,9 +27,8 @@ import javax.swing.tree.TreeNode;
  *
  */
 public class DiameterOfBinaryTree {
-    int result;
+    int result = 1;
     public int diameterOfBinaryTree(TreeNode root){
-        result = 1;
         depth(root);
         return result - 1;
     }
