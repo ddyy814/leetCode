@@ -28,12 +28,10 @@ import javax.swing.tree.TreeNode;
  * Easy level
  */
 public class Minimum_Absolute_Difference_inBST {
-    private Integer previous;
-    private int diff;   //存取当前遍历中获取的最小值， absolute minimum value
+    private Integer previous = null;
+    private int diff = Integer.MAX_VALUE;   //存取当前遍历中获取的最小值， absolute minimum value
 
     public int getMinimumDifference(TreeNode root){
-        previous = null;
-        diff = Integer.MAX_VALUE;   // 初始值最大值
         inorder(root);  // 进行中序遍历
         return diff;
     }
