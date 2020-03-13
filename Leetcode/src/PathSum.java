@@ -30,6 +30,6 @@ public class PathSum {
         if(root == null) return false;
         if(root.left == null && root.right == null) return root.val == sum;
         int newSum = sum - root.val;
-        return hasPathSum(root.left, newSum || hasPathSum(root.right, newSum);
+        return hasPathSum(root.left, newSum) || hasPathSum(root.right, newSum);
     }
 }
